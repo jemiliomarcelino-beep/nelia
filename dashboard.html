@@ -2,13 +2,13 @@
 <html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#123d24"><title>Painel de gestão | FluxEdu</title><link rel="stylesheet" href="style.css"></head>
 <body class="dashboard-body">
   <aside class="sidebar" id="sidebar">
-    <a class="brand sidebar-brand" href="index.html"><img src="assets/logo-fluxedu.png" alt="" class="brand-mark"><span>Flux<span>Edu</span><small>Gestão escolar</small></span></a>
+    <a class="brand sidebar-brand" href="index.html"><img src="logo-fluxedu.png" alt="" class="brand-mark"><span>Flux<span>Edu</span><small>Gestão escolar</small></span></a>
     <div class="sidebar-label">MENU PRINCIPAL</div>
     <nav class="dash-nav" aria-label="Navegação do painel">
       <button class="dash-link active" data-page="dashboard"><span>⌂</span> Painel principal</button>
-      <button class="dash-link" data-page="alunos"><span>♙</span> Alunos</button>
-      <button class="dash-link" data-page="pagamentos"><span>₥</span> Pagamentos</button>
-      <button class="dash-link" data-page="relatorios"><span>▤</span> Relatórios</button>
+      <button class="dash-link" data-page="alunos"><span>🧑‍🦱 </span> Alunos</button>
+      <button class="dash-link" data-page="pagamentos"><span>💳 </span> Pagamentos</button>
+      <button class="dash-link" data-page="relatorios"><span>📊 </span> Relatórios</button>
     </nav>
     <div class="sidebar-bottom"><div class="sidebar-help"><strong>Precisa de ajuda?</strong><p>Consulte as funcionalidades do FluxEdu.</p><a href="sobre.html">Sobre a plataforma →</a></div><a class="sidebar-home" href="index.html">← Página inicial</a></div>
   </aside>
@@ -21,11 +21,13 @@
       <section id="dashboard" class="dash-page">
         <div class="welcome-banner"><div><span class="banner-label">RESUMO DA INSTITUIÇÃO</span><h2>Olá! Vamos manter tudo organizado.</h2><p>Veja abaixo o resumo dos registos neste navegador.</p></div><span class="banner-art" aria-hidden="true">▤</span></div>
         <div class="stat-grid">
-          <article class="stat-card"><div class="stat-top"><span>Total de alunos</span><span class="stat-icon green-icon">♙</span></div><strong id="total-alunos">0</strong><small>Alunos registados</small></article>
-          <article class="stat-card"><div class="stat-top"><span>Receitas registadas</span><span class="stat-icon mint-icon">₥</span></div><strong id="total-receitas">0 MT</strong><small>Total de pagamentos</small></article>
-          <article class="stat-card"><div class="stat-top"><span>Pagamentos pendentes</span><span class="stat-icon amber-icon">◷</span></div><strong id="total-pendentes">0</strong><small>Alunos com saldo por cobrir</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Total de alunos</span><span class="stat-icon green-icon">🧑‍🦱 </span></div><strong id="total-alunos">0</strong><small>Alunos registados</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Receitas registadas</span><span class="stat-icon mint-icon">🧾</span></div><strong id="total-receitas">0 MT</strong><small>Total de pagamentos</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Pagamentos pendentes</span><span class="stat-icon amber-icon">⚠️ </span></div><strong id="total-pendentes">0</strong><small>Alunos com saldo por cobrir</small></article>
         </div>
-        <div class="dash-panel"><div class="panel-heading"><div><h2>Atividade recente</h2><p>Últimos registos de pagamento</p></div><button class="quiet-button" data-goto="pagamentos">Ver pagamentos →</button></div><div id="atividade" class="activity-empty"><span>▤</span><strong>Ainda não existem registos</strong><p>Quando registar pagamentos, a atividade aparecerá aqui.</p></div></div>
+        <div class="dash-panel"><div class="panel-heading"><div><h2>Atividade recente</h2><p>Últimos registos de pagamento</p></div><button class="quiet-button" data-goto="pagamentos">Ver pagamentos →</button></div><div id="atividade" class="activity-empty"><span>▤</span><strong>Ainda não existem registos</strong>
+          <p>Quando registar pagamentos, a atividade aparecerá aqui.</p>
+        </div></div>
       </section>
       <section id="alunos" class="dash-page hidden">
         <div class="dash-panel"><div class="panel-heading"><div><h2>Registar aluno</h2><p>Adicione os dados básicos do estudante.</p></div></div>
