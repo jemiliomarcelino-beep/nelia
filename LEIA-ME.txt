@@ -1,0 +1,38 @@
+FLUXEDU — VERSÃO RESPONSIVA
+
+COMO ABRIR
+1. Extraia o ficheiro FluxEdu_Responsivo.zip.
+2. Abra a pasta extraída.
+3. Clique duas vezes em index.html para abrir a página inicial no navegador.
+4. Para testar o painel, clique em “Abrir painel” ou abra dashboard.html.
+
+FICHEIROS PRINCIPAIS
+- index.html: página inicial.
+- sobre.html: apresentação da plataforma.
+- login.html: formulário demonstrativo de entrada.
+- cadastro.html: perfil de demonstração da instituição.
+- dashboard.html: painel de alunos, pagamentos e relatórios.
+- style.css: estilos responsivos para computador, tablet e telemóvel.
+- app.js: menu móvel e formulários demonstrativos.
+- dashboard.js: gestão local de alunos, pagamentos e exportação CSV.
+- assets/: imagens fornecidas para a identidade visual.
+
+FUNCIONALIDADES DO PAINEL
+- Registar alunos e encarregados.
+- Pesquisar alunos.
+- Registar pagamentos por mês.
+- Ver totais e estados pendentes.
+- Remover alunos e os respetivos pagamentos.
+- Exportar relatório CSV.
+- Guardar dados no localStorage deste navegador.
+
+IMPORTANTE
+Esta é uma demonstração front-end. Os dados ficam apenas no navegador utilizado e não são partilhados entre dispositivos. Não introduza palavras-passe reais nem dados pessoais sensíveis. Para uso real por uma escola, será necessário um backend com base de dados, autenticação segura, controlo de permissões, cópias de segurança e integração com um fornecedor de pagamentos. Os formulários de login/cadastro não implementam autenticação real.
+
+PUBLICAR NO GITHUB PAGES
+1. Crie um repositório no GitHub.
+2. Envie todos os ficheiros e a pasta assets mantendo a mesma estrutura.
+3. Abra Settings → Pages.
+4. Em Build and deployment, escolha Deploy from a branch.
+5. Selecione a branch main e a pasta / (root), depois guarde.
+6. Aguarde a publicação e abra o endereço apresentado pelo GitHub Pages.

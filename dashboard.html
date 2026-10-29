@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#123d24"><title>Painel de gestão | FluxEdu</title><link rel="stylesheet" href="style.css"></head>
+<body class="dashboard-body">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand sidebar-brand" href="index.html"><img src="assets/logo-fluxedu.png" alt="" class="brand-mark"><span>Flux<span>Edu</span><small>Gestão escolar</small></span></a>
+    <div class="sidebar-label">MENU PRINCIPAL</div>
+    <nav class="dash-nav" aria-label="Navegação do painel">
+      <button class="dash-link active" data-page="dashboard"><span>⌂</span> Painel principal</button>
+      <button class="dash-link" data-page="alunos"><span>♙</span> Alunos</button>
+      <button class="dash-link" data-page="pagamentos"><span>₥</span> Pagamentos</button>
+      <button class="dash-link" data-page="relatorios"><span>▤</span> Relatórios</button>
+    </nav>
+    <div class="sidebar-bottom"><div class="sidebar-help"><strong>Precisa de ajuda?</strong><p>Consulte as funcionalidades do FluxEdu.</p><a href="sobre.html">Sobre a plataforma →</a></div><a class="sidebar-home" href="index.html">← Página inicial</a></div>
+  </aside>
+  <div class="dashboard-main">
+    <header class="dash-header">
+      <div class="header-left"><button class="sidebar-toggle" id="sidebar-toggle" aria-label="Mostrar menu">☰</button><div><p class="header-kicker">ÁREA DE GESTÃO</p><h1 id="page-title">Painel principal</h1><p class="header-subtitle">Bem-vindo ao seu espaço de gestão escolar.</p></div></div>
+      <div class="profile-chip"><span class="profile-avatar">A</span><span><strong>Administrador</strong><small>Conta de demonstração</small></span></div>
+    </header>
+    <main class="dash-content">
+      <section id="dashboard" class="dash-page">
+        <div class="welcome-banner"><div><span class="banner-label">RESUMO DA INSTITUIÇÃO</span><h2>Olá! Vamos manter tudo organizado.</h2><p>Veja abaixo o resumo dos registos neste navegador.</p></div><span class="banner-art" aria-hidden="true">▤</span></div>
+        <div class="stat-grid">
+          <article class="stat-card"><div class="stat-top"><span>Total de alunos</span><span class="stat-icon green-icon">♙</span></div><strong id="total-alunos">0</strong><small>Alunos registados</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Receitas registadas</span><span class="stat-icon mint-icon">₥</span></div><strong id="total-receitas">0 MT</strong><small>Total de pagamentos</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Pagamentos pendentes</span><span class="stat-icon amber-icon">◷</span></div><strong id="total-pendentes">0</strong><small>Alunos com saldo por cobrir</small></article>
+        </div>
+        <div class="dash-panel"><div class="panel-heading"><div><h2>Atividade recente</h2><p>Últimos registos de pagamento</p></div><button class="quiet-button" data-goto="pagamentos">Ver pagamentos →</button></div><div id="atividade" class="activity-empty"><span>▤</span><strong>Ainda não existem registos</strong><p>Quando registar pagamentos, a atividade aparecerá aqui.</p></div></div>
+      </section>
+      <section id="alunos" class="dash-page hidden">
+        <div class="dash-panel"><div class="panel-heading"><div><h2>Registar aluno</h2><p>Adicione os dados básicos do estudante.</p></div></div>
+          <form id="form-aluno" class="form-grid">
+            <div class="field"><label for="nome">Nome completo do aluno</label><input id="nome" name="nome" placeholder="Nome do aluno" required></div>
+            <div class="field"><label for="encarregado">Encarregado de educação</label><input id="encarregado" name="encarregado" placeholder="Nome do encarregado" required></div>
+            <div class="field"><label for="mensalidade">Mensalidade (MT)</label><input id="mensalidade" name="mensalidade" type="number" min="0" step="0.01" placeholder="0,00" required></div>
+            <div class="field field-action"><button class="button" type="submit">＋ Adicionar aluno</button></div>
+          </form>
+        </div>
+        <div class="dash-panel"><div class="panel-heading panel-heading-wrap"><div><h2>Lista de alunos</h2><p>Consulte e pesquise os estudantes registados.</p></div><input id="pesquisa" class="search-input" placeholder="⌕  Pesquisar aluno..." aria-label="Pesquisar aluno"></div>
+          <div class="table-wrap"><table><thead><tr><th>Aluno</th><th>Encarregado</th><th>Mensalidade</th><th>Estado</th><th>Ações</th></tr></thead><tbody id="lista-alunos"></tbody></table></div>
+        </div>
+      </section>
+      <section id="pagamentos" class="dash-page hidden">
+        <div class="dash-panel"><div class="panel-heading"><div><h2>Registar pagamento</h2><p>Registe o valor pago e o mês correspondente.</p></div></div>
+          <form id="form-pagamento" class="form-grid">
+            <div class="field"><label for="aluno-pagamento">Aluno</label><select id="aluno-pagamento" required><option value="">Selecionar aluno</option></select></div>
+            <div class="field"><label for="valor-pagamento">Valor pago (MT)</label><input id="valor-pagamento" type="number" min="0.01" step="0.01" placeholder="0,00" required></div>
+            <div class="field"><label for="mes-pagamento">Mês</label><select id="mes-pagamento" required><option value="">Selecionar mês</option><option>Janeiro</option><option>Fevereiro</option><option>Março</option><option>Abril</option><option>Maio</option><option>Junho</option><option>Julho</option><option>Agosto</option><option>Setembro</option><option>Outubro</option><option>Novembro</option><option>Dezembro</option></select></div>
+            <div class="field field-action"><button class="button" type="submit">✓ Confirmar pagamento</button></div>
+          </form>
+        </div>
+        <div class="dash-panel"><div class="panel-heading"><div><h2>Histórico de pagamentos</h2><p>Pagamentos registados nesta demonstração.</p></div></div><div class="table-wrap"><table><thead><tr><th>Aluno</th><th>Mês</th><th>Valor</th><th>Data</th></tr></thead><tbody id="lista-pagamentos"></tbody></table></div></div>
+      </section>
+      <section id="relatorios" class="dash-page hidden">
+        <div class="dash-panel report-panel"><span class="report-symbol">▤</span><h2>Relatório financeiro</h2><p>Resumo dos valores registados no FluxEdu neste navegador.</p><div class="report-total"><span>Total recebido</span><strong id="relatorio-receitas">0 MT</strong></div><div class="report-total"><span>Pagamentos registados</span><strong id="relatorio-contagem">0</strong></div><button class="button" id="exportar">↓ Exportar relatório CSV</button><p class="muted report-note">O ficheiro CSV pode ser aberto em aplicações de folha de cálculo.</p></div>
+      </section>
+      <footer class="dash-footer"><span>© 2026 FluxEdu</span><span>Demonstração local · Os dados ficam neste navegador</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="dashboard.js"></script>
+</body></html>

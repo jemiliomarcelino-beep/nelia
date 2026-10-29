@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#123d24"><title>Entrar | FluxEdu</title><link rel="stylesheet" href="style.css"></head>
+<body class="auth-body">
+  <a class="back-home" href="index.html">← Voltar ao início</a>
+  <main class="auth-layout">
+    <section class="auth-brand-panel"><a class="brand brand-light" href="index.html"><img src="assets/logo-fluxedu.png" alt="" class="brand-mark"><span>Flux<span>Edu</span><small>Gestão escolar</small></span></a><h1>Gestão escolar, sem complicações.</h1><p>Consulte os registos e acompanhe os pagamentos num painel organizado.</p><img class="auth-art" src="assets/moldura-fluxedu.png" alt="Marca FluxEdu"></section>
+    <section class="auth-form-panel"><div class="auth-form-wrap"><span class="eyebrow">Bem-vindo de volta</span><h2>Entrar na plataforma</h2><p class="muted">Introduza os seus dados para continuar.</p>
+      <form id="login-form" class="form-stack">
+        <label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="nome@escola.co.mz" autocomplete="email" required>
+        <label for="password">Palavra-passe</label><input id="password" name="password" type="password" placeholder="Mínimo de 6 caracteres" autocomplete="current-password" minlength="6" required>
+        <p id="login-message" class="form-message" role="status"></p>
+        <button class="button button-full" type="submit">Entrar <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-switch">Ainda não tem conta? <a href="cadastro.html">Criar conta</a></p>
+      <div class="demo-note">Demonstração: este formulário não autentica utilizadores reais. Pode abrir diretamente o painel de demonstração.</div>
+      <a class="text-link" href="dashboard.html">Abrir painel de demonstração →</a>
+    </div></section>
+  </main><script src="app.js"></script>
+</body></html>
